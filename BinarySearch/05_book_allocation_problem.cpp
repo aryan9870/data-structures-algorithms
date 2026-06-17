@@ -32,7 +32,7 @@ bool isValid(vector<int> books, int students, int mid) {
 
 int main () {
 
-    vector<int> books = {15, 17, 20};
+    vector<int> books = {40, 30 , 10, 20};
 
     int students = 2;
 

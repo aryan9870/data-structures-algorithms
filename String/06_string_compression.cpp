@@ -3,9 +3,9 @@
 using namespace std;
 
 int main() {
-    vector<char> chars = {'a','a','b','b','c', 'd', 'd', 'd'};
+    vector<char> chars = {'a','a','b','b','c', 'c', 'c', 'c'};
     int idx = 0;
-    
+
     for(int i = 0; i < chars.size(); i++) {
         char ch = chars[i];
         int count = 0;
@@ -29,7 +29,8 @@ int main() {
         i--;
     }
 
-    for(int i = 0; i < idx; i++) {
+    chars.resize(idx);
+    for(int i = 0; i < chars.size(); i++) {
         cout << chars[i] << " ";
     }
 }

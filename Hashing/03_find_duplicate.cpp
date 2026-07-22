@@ -1,22 +1,28 @@
 #include <iostream>
 #include <vector>
-#include <unordered_set>
 using namespace std;
 
 int main () {
 
 
-    vector <int> v = {1, 2, 3, 3, 4};
+    vector <int> v = {3,1,3,4,2};
 
-    unordered_set <int> st;
 
-    for(int i = 0; i < v.size(); i++) {
-        if(st.find(v[i]) != st.end()) {
-            cout << v[i] << endl;
-            break;
-        }
+    int slow = v[0];
+    int fast = v[0];
 
-        st.insert(v[i]);
+    do{
+        slow = v[slow];
+        fast = v[v[fast]];
+    } while (slow != fast);
+
+    slow = v[0];
+
+    while (slow != fast) {
+        slow = v[slow];
+        fast = v[fast];
     }
 
+    cout << slow;
+    
 }
